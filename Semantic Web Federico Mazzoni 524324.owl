@@ -1,0 +1,3215 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/federico/ontologies/2021/1/narrative-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/federico/ontologies/2021/1/narrative-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/federico/ontologies/2021/1/narrative-ontology"/>
+    <Prefix name="wd" IRI="https://www.wikidata.org/wiki/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dctypes" IRI="http://purl.org/dc/dcmitype/"/>
+    <Declaration>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Actants"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bookshop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Characters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventConcepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fictional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FundamentalConcepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Living"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Narrative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NarrativeConcepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Narrator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotHuman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Objects"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherConcepts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publisher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Real"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SharedUniverse"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eventHasActant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eventHasConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eventHasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContractWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPublisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPublisherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReportedByBook"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reportsNarrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBeginning"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEnding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasISBN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInformation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLegalName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLegalProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPrice"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bompiani"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookDubliners"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookGO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookGulliver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookHobIt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookHobbit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookRDR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bookROTK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#crowley"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#discworld"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eveline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventDead"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventEveline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventGO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventGulliver1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventGulliver2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventHob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventLOTR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eventUnknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gabrielC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#grettaC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gulliver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#london"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#morkanHouse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#narrativeUnpublished"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#someone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#universeJoyce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q102424699"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q10816709"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q1761"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q185737"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q210059"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q3408689"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q41166"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q46248"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q7719162"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q795454"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#OtherConcepts"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#NarrativeConcepts"/>
+            <ObjectComplementOf>
+                <Class IRI="#FundamentalConcepts"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <Class IRI="#FundamentalConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#eventHasActant"/>
+            <ObjectUnionOf>
+                <Class IRI="#Characters"/>
+                <Class IRI="#Objects"/>
+            </ObjectUnionOf>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#eventHasLocation"/>
+            <Class abbreviatedIRI="dctypes:Locations"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasBeginning"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasEnding"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+        <Class IRI="#EventConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Actants"/>
+        <Class IRI="#EventConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#reportsNarrative"/>
+            <Class IRI="#Narrative"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPublisher"/>
+            <Class IRI="#Publisher"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasISBN"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Book"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPrice"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bookshop"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Characters"/>
+        <Class IRI="#Actants"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Characters"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dead"/>
+        <Class IRI="#Narrator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventConcepts"/>
+        <Class IRI="#FundamentalConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fictional"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FundamentalConcepts"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Characters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Living"/>
+        <Class IRI="#Narrator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrative"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#narrativeHasEvent"/>
+            <Class abbreviatedIRI="dctypes:Event"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrative"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#narrativeHasEvent"/>
+            <Class abbreviatedIRI="dctypes:Event"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrative"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#narrativeCreatedBy"/>
+            <Class IRI="#Narrator"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrator"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrator"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContractWith"/>
+            <Class IRI="#Publisher"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrator"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasContractWith"/>
+            <Class IRI="#Publisher"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotHuman"/>
+        <Class IRI="#Characters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Objects"/>
+        <Class IRI="#Actants"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Objects"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherConcepts"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContractWith"/>
+            <Class IRI="#Narrator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#isPublisherOf"/>
+            <Class IRI="#Book"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#sellsThroughBookshop"/>
+            <Class IRI="#Bookshop"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasID"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publisher"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasLegalName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Real"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SharedUniverse"/>
+        <Class IRI="#OtherConcepts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SharedUniverse"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#isUniverseOfNarrative"/>
+            <Class IRI="#Narrative"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <Class IRI="#EventConcepts"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+        <Class IRI="#Actants"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Book"/>
+        <Class IRI="#Narrative"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Book"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Book"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Book"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bookshop"/>
+        <Class IRI="#Publisher"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Human"/>
+        <Class IRI="#NotHuman"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Narrative"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Narrative"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Narrative"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NarrativeConcepts"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NarrativeConcepts"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="foaf:Organization"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+        <Class IRI="#Fictional"/>
+        <Class IRI="#Real"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Characters"/>
+        <Class IRI="#Human"/>
+        <Class IRI="#NotHuman"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#NarrativeConcepts"/>
+        <Class IRI="#FundamentalConcepts"/>
+        <Class IRI="#OtherConcepts"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Narrator"/>
+        <Class IRI="#Dead"/>
+        <Class IRI="#Living"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual IRI="#bompiani"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookGO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookRDR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Book"/>
+        <NamedIndividual IRI="#bookROTK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NotHuman"/>
+        <NamedIndividual IRI="#crowley"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fictional"/>
+        <NamedIndividual IRI="#discworld"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#eveline"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventDead"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventEveline"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventGO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dctypes:Event"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#gabrielC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#grettaC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#gulliver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Real"/>
+        <NamedIndividual IRI="#london"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fictional"/>
+        <NamedIndividual IRI="#morkanHouse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual IRI="#narrativeUnpublished"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Human"/>
+        <NamedIndividual IRI="#someone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SharedUniverse"/>
+        <NamedIndividual IRI="#universeJoyce"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fictional"/>
+        <NamedIndividual abbreviatedIRI="wd:Q102424699"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q10816709"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NotHuman"/>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Real"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1761"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NotHuman"/>
+        <NamedIndividual abbreviatedIRI="wd:Q185737"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Objects"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Living"/>
+        <NamedIndividual abbreviatedIRI="wd:Q210059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q3408689"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dead"/>
+        <NamedIndividual abbreviatedIRI="wd:Q41166"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dead"/>
+        <NamedIndividual abbreviatedIRI="wd:Q46248"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fictional"/>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dead"/>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q7719162"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q795454"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fictional"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SharedUniverse"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Narrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dead"/>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Publisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <NamedIndividual IRI="#bookRDR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <NamedIndividual abbreviatedIRI="wd:Q10816709"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <NamedIndividual abbreviatedIRI="wd:Q3408689"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookGO"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookGO"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <NamedIndividual IRI="#bompiani"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <NamedIndividual IRI="#bompiani"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <NamedIndividual IRI="#bookROTK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <NamedIndividual IRI="#bookROTK"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <NamedIndividual IRI="#bookROTK"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+        <NamedIndividual IRI="#crowley"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <NamedIndividual IRI="#discworld"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <NamedIndividual IRI="#discworld"/>
+        <NamedIndividual IRI="#narrativeUnpublished"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#eveline"/>
+        <NamedIndividual IRI="#eventEveline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventDead"/>
+        <NamedIndividual IRI="#gabrielC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventDead"/>
+        <NamedIndividual IRI="#grettaC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventDead"/>
+        <NamedIndividual IRI="#morkanHouse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventEveline"/>
+        <NamedIndividual IRI="#eveline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventEveline"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1761"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <NamedIndividual IRI="#eventEveline"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventGO"/>
+        <NamedIndividual IRI="#crowley"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventGO"/>
+        <NamedIndividual IRI="#london"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <NamedIndividual IRI="#eventGO"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+        <NamedIndividual IRI="#gulliver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+        <NamedIndividual abbreviatedIRI="wd:Q102424699"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+        <NamedIndividual IRI="#gulliver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasConcept"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <NamedIndividual abbreviatedIRI="wd:Q185737"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+        <NamedIndividual IRI="#someone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+        <NamedIndividual IRI="#discworld"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+        <NamedIndividual IRI="#narrativeUnpublished"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#gabrielC"/>
+        <NamedIndividual IRI="#eventDead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#grettaC"/>
+        <NamedIndividual IRI="#eventDead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#gulliver"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#gulliver"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <NamedIndividual IRI="#london"/>
+        <NamedIndividual IRI="#eventGO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <NamedIndividual IRI="#morkanHouse"/>
+        <NamedIndividual IRI="#eventDead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual IRI="#narrativeUnpublished"/>
+        <NamedIndividual abbreviatedIRI="wd:Q46248"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual IRI="#someone"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <NamedIndividual IRI="#universeJoyce"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <NamedIndividual IRI="#universeJoyce"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <NamedIndividual IRI="#universeJoyce"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <NamedIndividual IRI="#universeJoyce"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q102424699"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+        <NamedIndividual IRI="#bookGO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+        <NamedIndividual abbreviatedIRI="wd:Q210059"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+        <NamedIndividual abbreviatedIRI="wd:Q46248"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+        <NamedIndividual IRI="#eventGO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q10816709"/>
+        <NamedIndividual IRI="#bompiani"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+        <NamedIndividual IRI="#eventDead"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <NamedIndividual abbreviatedIRI="wd:Q7719162"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <NamedIndividual abbreviatedIRI="wd:Q795454"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1761"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+        <NamedIndividual abbreviatedIRI="wd:Q41166"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q185737"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasContractWith"/>
+        <NamedIndividual abbreviatedIRI="wd:Q210059"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q210059"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+        <NamedIndividual IRI="#bookROTK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q3408689"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q41166"/>
+        <NamedIndividual abbreviatedIRI="wd:Q181488"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q46248"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1052459"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1216839"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q7719162"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <NamedIndividual abbreviatedIRI="wd:Q795454"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+        <NamedIndividual IRI="#eventHob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q846228"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+        <NamedIndividual abbreviatedIRI="wd:Q6882"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <NamedIndividual abbreviatedIRI="wd:Q864141"/>
+        <NamedIndividual IRI="#eventEveline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+        <NamedIndividual abbreviatedIRI="wd:Q332581"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <NamedIndividual abbreviatedIRI="wd:Q892"/>
+        <NamedIndividual abbreviatedIRI="wd:Q74287"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual IRI="#bookGO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual IRI="#bookROTK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual abbreviatedIRI="wd:Q10816709"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual abbreviatedIRI="wd:Q22906322"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <NamedIndividual abbreviatedIRI="wd:Q7719162"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasID"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">4242</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLegalName"/>
+        <NamedIndividual IRI="#bompiani"/>
+        <Literal>Bompiani - Giunti Editore</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <Literal>1853260487</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookDubliners"/>
+        <Literal>Dubliners</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookGO"/>
+        <Literal>0060853980</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookGO"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookGO"/>
+        <Literal>Good Omens</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <Literal>1853260274</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <Literal>Gulliver&apos;s Travels</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookGulliver"/>
+        <Literal>Travels into Several Remote Nations of the World. In Four parts. By Lemuel Gulliver, First a Surgeon, and then a Captain of Several Ships</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <Literal>8845268349</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookHobIt"/>
+        <Literal>Lo Hobbit. Un viaggio inaspettato</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+        <Literal>0261102214</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookHobbit"/>
+        <Literal>The Hobbit: or There and Back Again</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <Literal>8830102725</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">23</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookRDR"/>
+        <Literal>Il Ritorno del Re</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasISBN"/>
+        <NamedIndividual IRI="#bookROTK"/>
+        <Literal>0261102370</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#bookROTK"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">17</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTitle"/>
+        <NamedIndividual IRI="#bookROTK"/>
+        <Literal>The Return of the King</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#crowley"/>
+        <Literal>Crowley</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#discworld"/>
+        <Literal>Discworld</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#eveline"/>
+        <Literal>Eveline</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventDead"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1914-12-25T19:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventDead"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1914-12-25T20:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventEveline"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1914-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventEveline"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1914-01-01T00:00:01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventGO"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1990-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventGO"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1990-01-01T00:00:01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1699-05-04T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventGulliver1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1702-04-13T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1706-08-08T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventGulliver2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1706-04-15T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2941-07-17T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventHob"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2941-07-17T01:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">3019-03-25T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventLOTR"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">3019-03-25T01:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBeginning"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">0000-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEnding"/>
+        <NamedIndividual IRI="#eventUnknown"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">9999-12-31T23:59:59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#gabrielC"/>
+        <Literal>Gabriel Conroy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#grettaC"/>
+        <Literal>Gretta Conroy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#gulliver"/>
+        <Literal>Gulliver</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#london"/>
+        <Literal>London</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#morkanHouse"/>
+        <Literal>House of the Morkan sisters</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#someone"/>
+        <Literal>Someone</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q102424699"/>
+        <Literal>Lilliput</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+        <Literal>Gollum</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q15007"/>
+        <Literal>Sméagol</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasID"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">2929</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLegalName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q17027435"/>
+        <Literal>Wordsworth Editions Ltd</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q1761"/>
+        <Literal>Dublin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q185737"/>
+        <Literal>Bilbo Baggins</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q19852"/>
+        <Literal>the One Ring</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q543170"/>
+        <Literal>Laputa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q79734"/>
+        <Literal>Middle-earth</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasID"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">99999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLegalName"/>
+        <NamedIndividual abbreviatedIRI="wd:Q95149"/>
+        <Literal>HarperCollins Publishers Inc</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <ObjectProperty IRI="#eventHasConcept"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <ObjectProperty IRI="#eventHasConcept"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasContractWith"/>
+        <ObjectProperty IRI="#hasContractWith"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <ObjectProperty IRI="#isPublisherOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <ObjectProperty IRI="#reportsNarrative"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eventHasLocation"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPublisher"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#isPublisherOf"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#hasContractWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eventHasConcept"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContractWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#Narrator"/>
+            <Class IRI="#Publisher"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <ObjectUnionOf>
+            <Class IRI="#Characters"/>
+            <Class IRI="#Objects"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+        <Class IRI="#Actants"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+        <Class IRI="#EventConcepts"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <Class IRI="#Narrator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <Class IRI="#SharedUniverse"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <Class IRI="#Bookshop"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <Class IRI="#Actants"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eventHasConcept"/>
+        <Class IRI="#EventConcepts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#eventHasLocation"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContractWith"/>
+        <ObjectUnionOf>
+            <Class IRI="#Narrator"/>
+            <Class IRI="#Publisher"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isConceptOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <Class IRI="#Book"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <Class IRI="#Narrator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+        <Class IRI="#Actants"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeHasConcept"/>
+        <Class IRI="#NarrativeConcepts"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+        <Class abbreviatedIRI="dctypes:Locations"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+        <Class IRI="#SharedUniverse"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <Class IRI="#Narrative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <Class IRI="#Publisher"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+        <Class IRI="#Bookshop"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#eventHasActant"/>
+        <ObjectProperty IRI="#eventHasLocation"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#eventHasConcept"/>
+        <ObjectProperty IRI="#hasPublisher"/>
+        <ObjectProperty IRI="#isAnotherEditionOf"/>
+        <ObjectProperty IRI="#isConceptOfEvent"/>
+        <ObjectProperty IRI="#isCreatorOfNarrative"/>
+        <ObjectProperty IRI="#isEventOfNarrative"/>
+        <ObjectProperty IRI="#isPublisherOf"/>
+        <ObjectProperty IRI="#isReportedByBook"/>
+        <ObjectProperty IRI="#isUniverseOfNarrative"/>
+        <ObjectProperty IRI="#narrativeCreatedBy"/>
+        <ObjectProperty IRI="#narrativeHasEvent"/>
+        <ObjectProperty IRI="#narrativeHasSharedUniverse"/>
+        <ObjectProperty IRI="#reportsNarrative"/>
+        <ObjectProperty IRI="#sellsForPublisher"/>
+        <ObjectProperty IRI="#sellsThroughBookshop"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isActantOfEvent"/>
+        <ObjectProperty IRI="#isLocationOfEvent"/>
+    </DisjointObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isActantOfEvent"/>
+            <ObjectProperty IRI="#isEventOfNarrative"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#isActantOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isCreatorOfNarrative"/>
+            <ObjectProperty IRI="#isReportedByBook"/>
+            <ObjectProperty IRI="#hasPublisher"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#hasContractWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isLocationOfEvent"/>
+            <ObjectProperty IRI="#isEventOfNarrative"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#isLocationOfNarrative"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#narrativeHasEvent"/>
+            <ObjectProperty IRI="#eventHasActant"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#narrativeHasActant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#narrativeHasEvent"/>
+            <ObjectProperty IRI="#eventHasLocation"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#narrativeHasLocation"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBeginning"/>
+        <DataProperty IRI="#hasPart"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEnding"/>
+        <DataProperty IRI="#hasPart"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasID"/>
+        <DataProperty IRI="#hasLegalProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasISBN"/>
+        <DataProperty IRI="#hasInformation"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLegalName"/>
+        <DataProperty IRI="#hasLegalProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasPrice"/>
+        <DataProperty IRI="#hasInformation"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasTitle"/>
+        <DataProperty IRI="#hasInformation"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasBeginning"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasEnding"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasISBN"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLegalName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPrice"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBeginning"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEnding"/>
+        <Class abbreviatedIRI="dctypes:Event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasID"/>
+        <Class IRI="#Publisher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasISBN"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLegalName"/>
+        <Class IRI="#Publisher"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="dctypes:Locations"/>
+            <Class IRI="#Characters"/>
+            <Class IRI="#Objects"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPrice"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTitle"/>
+        <Class IRI="#Book"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBeginning"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEnding"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasID"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasISBN"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLegalName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPrice"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#hasID"/>
+        <DataProperty IRI="#hasLegalName"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#hasISBN"/>
+        <DataProperty IRI="#hasPrice"/>
+        <DataProperty IRI="#hasTitle"/>
+    </DisjointDataProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#hasInformation"/>
+        <DataProperty IRI="#hasLegalProperty"/>
+        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#hasPart"/>
+    </DisjointDataProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dctypes:Event</AbbreviatedIRI>
+        <Literal xml:lang="en">The atomic unit of every narrative. Every event is a &quot;fact&quot; in the narrative world, is defined by the actions of some actants and takes place in a particular location during a particular time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dctypes:Event</AbbreviatedIRI>
+        <Literal>Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dctypes:Locations</AbbreviatedIRI>
+        <Literal xml:lang="en">Fictional or real locations depicted in the narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dctypes:Locations</AbbreviatedIRI>
+        <Literal>Locations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Actants</IRI>
+        <Literal xml:lang="en">Concepts which defines every action depicted in a narrative event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Actants</IRI>
+        <Literal>Actants</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Book</IRI>
+        <Literal xml:lang="en">The physical or digital object which contains one or more narrative in a written form.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Book</IRI>
+        <Literal>Book</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bookshop</IRI>
+        <Literal xml:lang="en">An organization which sells book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bookshop</IRI>
+        <Literal>Bookshop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Characters</IRI>
+        <Literal xml:lang="en">Fictional or real sentient beings depicted in the narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Characters</IRI>
+        <Literal>Characters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Dead</IRI>
+        <Literal xml:lang="en">A narrator who is dead, and therefore has no longer a legal ownership of his creations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dead</IRI>
+        <Literal>DeadNarrator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EventConcepts</IRI>
+        <Literal xml:lang="en">Concepts used by a narrative event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventConcepts</IRI>
+        <Literal>EventConcepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fictional</IRI>
+        <Literal xml:lang="en">A location depicted in the narrative which is fictional - i.e. it has none referent in the real world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fictional</IRI>
+        <Literal>Fictional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FundamentalConcepts</IRI>
+        <Literal xml:lang="en">The fundamental concepts of every narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FundamentalConcepts</IRI>
+        <Literal>FundamentalConcepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Human</IRI>
+        <Literal xml:lang="en">A character who is human.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Human</IRI>
+        <Literal>Human</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Living</IRI>
+        <Literal xml:lang="en">A narrator who is alive.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Living</IRI>
+        <Literal>LivingNarrator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Narrative</IRI>
+        <Literal xml:lang="en">A representation of events, necessarily linked one to another to form a story about a specific topic. Used by humans as a cognitive instrument and/or for amusement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Narrative</IRI>
+        <Literal>Narrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NarrativeConcepts</IRI>
+        <Literal xml:lang="en">Concepts used by a narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NarrativeConcepts</IRI>
+        <Literal>NarrativeConcepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Narrator</IRI>
+        <Literal xml:lang="en">A person who is the real-world creator of the world depicted in a narrative. In the contemporary age, he also (at least initially) holds the copyright rights of the narrative and its components.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Narrator</IRI>
+        <Literal>Narrator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NotHuman</IRI>
+        <Literal xml:lang="en">A character who is nott human. Includes anthropomorphic characters with human-likes attributes, but who are not human in the world of the narrative (e.g. elves).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NotHuman</IRI>
+        <Literal>NotHuman</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Objects</IRI>
+        <Literal xml:lang="en">Objects depicted the narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Objects</IRI>
+        <Literal>Objects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OtherConcepts</IRI>
+        <Literal xml:lang="en">Concepts which are not fundamental and, therefore, are not necessarily part of a narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OtherConcepts</IRI>
+        <Literal>OtherConcepts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publisher</IRI>
+        <Literal xml:lang="en">An organization which publishes books.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Publisher</IRI>
+        <Literal>Publisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Real</IRI>
+        <Literal xml:lang="en">A location depicted in the narrative which is real - i.e. it has a referent in the real world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Real</IRI>
+        <Literal>Real</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SharedUniverse</IRI>
+        <Literal xml:lang="en">The universe in which at least two narratives take place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SharedUniverse</IRI>
+        <Literal>SharedUniverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bompiani</IRI>
+        <Literal>Publisher: Bompiani</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookDubliners</IRI>
+        <Literal>Book: Dubliners</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookGO</IRI>
+        <Literal>Book: Good Omens</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookGulliver</IRI>
+        <Literal>Book: Gulliver&apos;s Travel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookHobIt</IRI>
+        <Literal>Book: Lo Hobbit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookHobbit</IRI>
+        <Literal>Book: The Hobbit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookRDR</IRI>
+        <Literal>Book: Il Ritorno del Re (ISdA #3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#bookROTK</IRI>
+        <Literal>Book: The Return of the King (LOTR #3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#crowley</IRI>
+        <Literal>Character: Crowley</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#discworld</IRI>
+        <Literal>Location: Discworld</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eveline</IRI>
+        <Literal>Character: Eveline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventDead</IRI>
+        <Literal>Event (The Dead): Gabriel&apos;s Speech</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventEveline</IRI>
+        <Literal>Event (Eveline): Eveline&apos;s Choice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventGO</IRI>
+        <Literal>Event (Good Omens): Learning about the Apocalypse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventGulliver1</IRI>
+        <Literal>Event (Gulliver&apos;s Travel): Lilliput</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventGulliver2</IRI>
+        <Literal>Event (Gulliver&apos;s Travel): Laputa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#eventHasActant</IRI>
+        <Literal xml:lang="en">eventHasActant relates at least one event to the actant(s) it has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventHasActant</IRI>
+        <Literal>eventHasActant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#eventHasConcept</IRI>
+        <Literal xml:lang="en">eventHasConcept relates at least one event to the concept(s) it has. It is a superproperty of: eventHasActant, eventHasLocation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventHasConcept</IRI>
+        <Literal>eventHasConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#eventHasLocation</IRI>
+        <Literal xml:lang="en">eventHasLocation relates at least one event to the location it has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventHasLocation</IRI>
+        <Literal>eventHasLocation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventHob</IRI>
+        <Literal>Event (The Hobbit): Bilbo gets the Ring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventLOTR</IRI>
+        <Literal>Event (ROTK): The Ring is destroyed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eventUnknown</IRI>
+        <Literal>Event (Discworld): Unknown Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gabrielC</IRI>
+        <Literal>Character: Gabriel Conroy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#grettaC</IRI>
+        <Literal>Character: Gretta Conroy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gulliver</IRI>
+        <Literal>Character: Gulliver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBeginning</IRI>
+        <Literal xml:lang="en">hasBeginning includes data properties which relates an event to its beginning.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBeginning</IRI>
+        <Literal xml:lang="en">hasBeginning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContractWith</IRI>
+        <Literal xml:lang="en">hasContractWith is a symmetric property that relates at least one narrator to the publisher(s) they have, and vice-versa. 
+
+It is possible for a publisher to have a contract with a third person who is not the narrator, e.g. if the narrator previously sold the rights of their work or if they died. If the work is in the public domain, nobody is owning the rights so the publisher doesn&apos;t really have a contract. 
+
+The meaning of this property should therefore be taken in a broader, non-literal sense.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasContractWith</IRI>
+        <Literal>hasContractWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasEnding</IRI>
+        <Literal xml:lang="en">hasEnding includes data properties which relates an event to its ending.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEnding</IRI>
+        <Literal xml:lang="en">hasEnding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasID</IRI>
+        <Literal xml:lang="en">hasID relates a publisher to an unique ID.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasID</IRI>
+        <Literal xml:lang="en">hasID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasISBN</IRI>
+        <Literal xml:lang="en">isISBN related a book to its ISBN.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasISBN</IRI>
+        <Literal xml:lang="en">hasISBN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasInformation</IRI>
+        <Literal xml:lang="en">hasInformation includes data properties which relates a book to some information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInformation</IRI>
+        <Literal xml:lang="en">hasInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLegalName</IRI>
+        <Literal xml:lang="en">hasLegalName relates a publisher to its unique legal name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLegalName</IRI>
+        <Literal xml:lang="en">hasLegalName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLegalProperty</IRI>
+        <Literal xml:lang="en">hasInformation includes data properties which relates a book publisher to its legal properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLegalProperty</IRI>
+        <Literal xml:lang="en">hasLegalProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal xml:lang="en">hasName relates a location, a character or an object to their name(s).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasName</IRI>
+        <Literal xml:lang="en">hasName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en">hasPart includes data properties which relates an event to its ending or its beginning.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en">hasPart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPrice</IRI>
+        <Literal xml:lang="en">hasPrice related a book to its price.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPrice</IRI>
+        <Literal xml:lang="en">hasPrice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPublisher</IRI>
+        <Literal xml:lang="en">hasPublisher relates a book, or a set of books, to its publisher.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPublisher</IRI>
+        <Literal>hasPublisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasTitle</IRI>
+        <Literal xml:lang="en">hasTitle related a book to its title(s).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTitle</IRI>
+        <Literal xml:lang="en">hasTitle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isActantOfEvent</IRI>
+        <Literal xml:lang="en">isActantOfEvent relates at least one actant to at least one event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isActantOfEvent</IRI>
+        <Literal>isActantOfEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isActantOfNarrative</IRI>
+        <Literal xml:lang="en">isActantOfNarrative relates at least one actant to at least one narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isActantOfNarrative</IRI>
+        <Literal>isActantOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAnotherEditionOf</IRI>
+        <Literal xml:lang="en">isAnotherEditionOf is a symmetric property relating books which report the same narrative (or the same set of narratives).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAnotherEditionOf</IRI>
+        <Literal>isAnotherEditionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isConceptOfEvent</IRI>
+        <Literal xml:lang="en">isConceptOfEvent relates a concept, or a set of concepts, to at least one event. It is a superproperty of: isActantOfEvent, isLocationOfEvent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isConceptOfEvent</IRI>
+        <Literal>isConceptOfEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isConceptOfNarrative</IRI>
+        <Literal xml:lang="en">isConceptOfNarrative relates a concept, or a set of concepts, to at least one narrative. It is a superproperty of: isActantOfNarrative, isLocationOfNarrative, isEventOfNarrative, isUniverseOfNarrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isConceptOfNarrative</IRI>
+        <Literal>isConceptOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCreatorOfNarrative</IRI>
+        <Literal xml:lang="en">isCreatorOfNarrative relates at least one narrator to at least one narrative they have created.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCreatorOfNarrative</IRI>
+        <Literal>isCreatorOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isEventOfNarrative</IRI>
+        <Literal xml:lang="en">isEventOfNarrative relates at least one event to at least one narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEventOfNarrative</IRI>
+        <Literal>isEventOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLocationOfEvent</IRI>
+        <Literal xml:lang="en">isLocationOfEvent relates one location to at least one event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocationOfEvent</IRI>
+        <Literal>isLocationOfEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLocationOfNarrative</IRI>
+        <Literal xml:lang="en">isLocationOfNarrative relates at least one location to at least one narrative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocationOfNarrative</IRI>
+        <Literal>isLocationOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPublisherOf</IRI>
+        <Literal xml:lang="en">isPublisherOf relates one publisher to the books it has published (at least two).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isPublisherOf</IRI>
+        <Literal>isPublisherOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isReportedByBook</IRI>
+        <Literal xml:lang="en">isReportedByBook relates at least one narrative to the book(s) reporting it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isReportedByBook</IRI>
+        <Literal>isReportedByBook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isUniverseOfNarrative</IRI>
+        <Literal xml:lang="en">isUniverseOfNarrative relates at least one shared universe to at least two narratives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isUniverseOfNarrative</IRI>
+        <Literal>isUniverseOfNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#london</IRI>
+        <Literal>Location: London</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#morkanHouse</IRI>
+        <Literal>Location: Morkan House</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeCreatedBy</IRI>
+        <Literal xml:lang="en">narrativeCreatedBy relates at least one narrative to the narrator(s) creating it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeCreatedBy</IRI>
+        <Literal>narrativeCreatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeHasActant</IRI>
+        <Literal xml:lang="en">narrativeHasActant relates at least one narrative to the actant(s) it has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeHasActant</IRI>
+        <Literal>narrativeHasActant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeHasConcept</IRI>
+        <Literal xml:lang="en">narrativeHasConcept relates a narrative to the concept(s) it has. It is a superproperty of: narrativeHasActant, narrativeHasLocation, narrativeHasEvent, narrativeHasSharedUniverse.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeHasConcept</IRI>
+        <Literal>narrativeHasConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeHasEvent</IRI>
+        <Literal xml:lang="en">narrativeHasEvent relates at least one narrative to the event(s) it has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeHasEvent</IRI>
+        <Literal>narrativeHasEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeHasLocation</IRI>
+        <Literal xml:lang="en">narrativeHasLocation relates at least one narrative to the location(s) it has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeHasLocation</IRI>
+        <Literal>narrativeHasLocation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeHasSharedUniverse</IRI>
+        <Literal xml:lang="en">narrativeHasShared Universe relates at least two narratives to the universe(s) they share.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeHasSharedUniverse</IRI>
+        <Literal>narrativeHasSharedUniverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#narrativeUnpublished</IRI>
+        <Literal>Terry Pratchett died with a lot of unfinished books, which were then destroyed, following his instructions.  They are therefore narratives not reported by any book.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#narrativeUnpublished</IRI>
+        <Literal>Narrative: Unpublished Discworld Adventures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reportsNarrative</IRI>
+        <Literal xml:lang="en">reportsNarrative relates at least one book to the narrative(s) it is reporting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#reportsNarrative</IRI>
+        <Literal>reportsNarrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sellsForPublisher</IRI>
+        <Literal xml:lang="en">sellsForPublisher relates at least one bookshop to the publisher it is selling the books for.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sellsForPublisher</IRI>
+        <Literal>sellsForPublisher</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sellsThroughBookshop</IRI>
+        <Literal xml:lang="en">sellsThroughBookshop relates at least one publisher to the bookshop it is selling the books through (at least two).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sellsThroughBookshop</IRI>
+        <Literal>sellsThroughBookshop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#someone</IRI>
+        <Literal>Character: Someone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#universeJoyce</IRI>
+        <Literal>Universe: Joyce&apos;s Shared Universe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:Organization</AbbreviatedIRI>
+        <Literal xml:lang="en">An entity made up by a group of people for a specific purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:Organization</AbbreviatedIRI>
+        <Literal>Organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en">A human who exists, or existed, in the real world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q102424699</AbbreviatedIRI>
+        <Literal>Location: Lilliput Island</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q1052459</AbbreviatedIRI>
+        <Literal>Narrative: Good Omens</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q10816709</AbbreviatedIRI>
+        <Literal>Bookshop: Libreria Bozzi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q1216839</AbbreviatedIRI>
+        <Literal>Narrative: The Dead</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q15007</AbbreviatedIRI>
+        <Literal>Character: Gollum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q17027435</AbbreviatedIRI>
+        <Literal>Publisher: Wordsworth Editions Ltd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q1761</AbbreviatedIRI>
+        <Literal>Location: Dublin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q181488</AbbreviatedIRI>
+        <Literal>Narrative: Gulliver&apos;s Travels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q185737</AbbreviatedIRI>
+        <Literal>Character: Bilbo Baggins</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q19852</AbbreviatedIRI>
+        <Literal>Object: the Ring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q210059</AbbreviatedIRI>
+        <Literal>Narrator: Neil Gaiman</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q22906322</AbbreviatedIRI>
+        <Literal>Bookshop: Amazon Books</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q332581</AbbreviatedIRI>
+        <Literal>Narrative: The Return of the King</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q3408689</AbbreviatedIRI>
+        <Literal>Bookshop: Livraria Lello e Irmão</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q41166</AbbreviatedIRI>
+        <Literal>Narrator: Jonathan Swift</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q46248</AbbreviatedIRI>
+        <Literal>Narrator: Terry Pratchett</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q543170</AbbreviatedIRI>
+        <Literal>Location: Laputa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q6882</AbbreviatedIRI>
+        <Literal>Narrator: James Joyce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q74287</AbbreviatedIRI>
+        <Literal>Narrative: The Hobbit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q7719162</AbbreviatedIRI>
+        <Literal>Bookshop: Book Depository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q795454</AbbreviatedIRI>
+        <Literal>Bookshop: Barnes &amp; Noble</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q79734</AbbreviatedIRI>
+        <Literal>Location: Middle-earth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q846228</AbbreviatedIRI>
+        <Literal>Universe: The Lord of the Rings Universe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q864141</AbbreviatedIRI>
+        <Literal>Narrative: Eveline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q892</AbbreviatedIRI>
+        <Literal>Narrator: J. R. R. Tolkien</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wd:Q95149</AbbreviatedIRI>
+        <Literal>Publisher: HarperCollins</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
